@@ -5,6 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import org.testng.annotations.BeforeSuite;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 import java.time.Duration;
 
 public class BaseTest {
