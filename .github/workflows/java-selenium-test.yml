@@ -28,7 +28,13 @@ jobs:
           distribution: 'corretto'
           cache: maven
       - name: Install Chrome
-        run: sudo apt-get install google-chrome-stable
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
       - name: Build with Maven
         env:
           S_USERNAME: ${{secrets.S_USERNAME}}
