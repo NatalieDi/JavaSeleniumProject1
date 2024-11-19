@@ -16,5 +16,13 @@ public class PracticeTest extends BaseTest {
         Thread.sleep(3000);
     }
 
+    @Test
+    public void testPageTitleName() {
+        String expectedTitle = "Products";
+        String actualTitle = driver.findElement(By.className("title")).getText();
+
+        Assert.assertEquals(actualTitle, expectedTitle, "Page title is incorrect");
+    }
+
 }
 
