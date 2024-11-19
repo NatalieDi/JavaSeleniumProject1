@@ -24,5 +24,6 @@ public class PracticeTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle, "Page title is incorrect");
     }
 
+
 }
 
