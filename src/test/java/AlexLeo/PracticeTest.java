@@ -24,6 +24,24 @@ public class PracticeTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle, "Page title is incorrect");
     }
 
-
+    @Test
+    public void testFindMoreButton() throws InterruptedException {
+        org.openqa.selenium.WebElement element;
+        try {
+            element = driver.findElement(By.xpath("//*[@id=\"post-61\"]/div/div[1]/div/div/div/div/div[2]/a"));
+        } catch (Exception e) {
+            System.out.println("Element not found");
+            throw new RuntimeException(e);
+        }
+        element.click();
+        int count = 0;
+        while (count < 10) {
+            if (driver.getCurrentUrl().equals("https://askomdch.com/contact-us/")) {
+                break;
+            }
+            Thread.sleep(200);
+            count++;
+        }
+    }
 }
 
