@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'correto'
+          distribution: 'corretto'
           cache: maven
       - name: Install Chrome
         run: sudo apt-get install google-chrome-stable
