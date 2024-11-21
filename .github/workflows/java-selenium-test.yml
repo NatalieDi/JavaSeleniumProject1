@@ -37,8 +37,8 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           CI_RUN: true
         run: mvn -B package --file pom.xml
-      - name: Run all Tests (TestNG and JUnit)
-        run: mvn test
+      - name: Run Tests
+        run: mvn clean test
       - name: Display Test Results
         run: cat target/surefire-reports/*.txt || true
       - name: Attach screenshots and reports
@@ -54,3 +54,5 @@ jobs:
         with:
           name: report
           path: target/surefire-reports/emailable-report.html
+
+
