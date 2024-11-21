@@ -30,6 +30,12 @@
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
