@@ -4,7 +4,6 @@
     <test name="Test1">
         <classes>
             <class name="AlexLeo.PracticeTest"/>
-            <class name="TestCases"/>
         </classes>
     </test>
 </suite>

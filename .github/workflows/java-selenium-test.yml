@@ -5,6 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+
 
 jobs:
   CI:
@@ -56,5 +58,6 @@ jobs:
         with:
           name: report
           path: target/surefire-reports/emailable-report.html
+
 
 
