@@ -74,8 +74,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        // Убедитесь, что путь к chromedriver правильный и использует двойные обратные слэши для Windows
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Google\\Chrome\\Application\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
 
         // Настройка опций Chrome для headless-режима
         ChromeOptions options = new ChromeOptions();
